@@ -1,0 +1,14 @@
+[
+    {
+    "id": "84e96018-4022-434e-80bf-000ce4cd12b8",
+    "title": "The Future of Artificial Intelligence",
+    "channel": "Aiden Thompson",
+    "image": "https://unit-3-project-api-0a5620414506.herokuapp.com/images/image0.jpg" 
+    },
+    {
+    "id": "c05b9a93-8682-4ab6-aff2-92ebb4bbfc14",
+    "title": "Exploring Cities of Europe",
+    "channel": "Maria Aziz",
+    "image": "https://unit-3-project-api-0a5620414506.herokuapp.com/images/image1.jpg"
+    }
+]
