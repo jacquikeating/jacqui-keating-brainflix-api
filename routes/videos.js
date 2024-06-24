@@ -5,7 +5,6 @@ import uniqid from 'uniqid';
 
 const router = express.Router();
 
-
 function readData() {
     const videosFile = fs.readFileSync("../jacqui-keating-brainflix-api/data/videos.json");
     const videosData = JSON.parse(videosFile);
@@ -81,13 +80,7 @@ router.post('/videos/:id/comments', (req, res) => {
     }
     videoComments.push(newComment);
     writeData(videosData);
-    res.status(201).send(`Your comment has been posted. Details:
-        - ID: ${newComment.id}
-        - Name: ${newComment.name}
-        - Comment: ${newComment.comment}
-        - Likes: ${newComment.likes}
-        - Timestamp: ${newComment.timestamp} `
-    );
+    res.status(201).send(`Your comment has been posted.`);
 });
 
 router.delete('/videos/:id/comments/:commentId', (req, res) => {
