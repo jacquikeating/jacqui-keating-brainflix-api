@@ -107,6 +107,7 @@ router.delete('/videos/:id/comments/:commentId', (req, res) => {
     videoComments.splice(commentIndex, 1);
     writeData(videosData);
     res.status(204);
+    res.end();
 });
 
 export default router;
