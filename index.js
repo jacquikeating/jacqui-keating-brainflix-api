@@ -17,6 +17,8 @@ app.get('/healthcheck', (_req, res) => {
 
 app.use('/', videoRoutes);
 
+app.use(express.static("./public/images"));
+
 app.listen(PORT, () => {
 	console.log(`Server is listening on port ${PORT}.`);
 });

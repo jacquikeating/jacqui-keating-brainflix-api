@@ -37,10 +37,10 @@ router.post('/videos', (req, res) => {
     const videosDetails = videosData.videosDetails;
     const newVideoDetails = {
         id: uniqid(),
-        title: "Test video",
+        title: req.body.title,
         channel: "Test User",
-        image: "None",
-        description: "smfsfmsdfsfmssd",
+        image: req.body.image,
+        description: req.body.description,
         views: 0,
         duration: "1:00",
         video: "Placeholder",
@@ -72,7 +72,7 @@ router.post('/videos/:id/comments', (req, res) => {
     const newComment = {
         id: uniqid(),
         name: "Test User",
-        comment: "Placeholder comment body",
+        comment: req.body.comment,
         likes: 0,
         timestamp: Date.now()
     }
