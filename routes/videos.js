@@ -28,6 +28,9 @@ router.get('/videos/:id', (req, res) => {
     const videosData = readData();
     const detailedData = videosData.videosDetails;
     const matchingVideo = detailedData.find(video => video.id === id);
+    if (!matchingVideo) {
+        return res.status(404).send(`Cannot find video with ID ${id}.`);
+    }
     res.send(matchingVideo);
 });
 
@@ -42,7 +45,7 @@ router.post('/videos', (req, res) => {
         image: req.body.image,
         description: req.body.description,
         views: 0,
-        duration: "1:00",
+        duration: "0:00",
         video: "Placeholder",
         timestamp: Date.now(),
         comments: []
